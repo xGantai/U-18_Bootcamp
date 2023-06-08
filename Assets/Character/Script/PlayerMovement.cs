@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private HealtSystem PlayerHealt;
     [SerializeField] private PowerSystem PlayerPower;
 
+    private PointSystem PlayerPoint;
     private Animator PlayerAnimator;
     private Vector2 MoveInput;
     // Dash
@@ -82,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //PlayerAnimator.SetBool("Jump", false);
         }
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") && !isDashing)
         {
             PlayerHealt.Damage(15);
             PlayerPower.PowerMinus(5);
