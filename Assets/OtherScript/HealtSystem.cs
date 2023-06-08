@@ -11,12 +11,13 @@ public class HealtSystem
 
     public void Damage(int DamageData)
     {
-        Healt -= Mathf.Clamp(DamageData, 0, MaxHealt);
+        Healt = Mathf.Clamp(Healt - DamageData, 0, MaxHealt);
+
     }
 
     public void HealtBoost(int HealtBoostData)
     {
-        Healt = Mathf.Clamp(HealtBoostData, 0, MaxHealt);
+        Healt = Mathf.Clamp(Healt + HealtBoostData, 0, MaxHealt);
     }
 
     public void SetHealt(int HealtData)

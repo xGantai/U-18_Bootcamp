@@ -11,7 +11,7 @@ public class PowerSystem
 
     public void PowerBoost(int PowerBoostData)
     {
-        Power += Mathf.Clamp(PowerBoostData, 0, MaxPower);
+        Power = Mathf.Clamp(Power + PowerBoostData, 0, MaxPower);
     }
 
     public void SetPower(int PowerData)
@@ -21,6 +21,6 @@ public class PowerSystem
 
     public void PowerMinus(int PowerMinusData)
     {
-        Power -= Mathf.Clamp(PowerMinusData, 0, MaxPower);
+        Power = Mathf.Clamp(Power - PowerMinusData, 0, MaxPower);
     }
 }
