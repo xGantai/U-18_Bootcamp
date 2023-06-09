@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 MoveInput;
     // Dash
     private bool CanDash;
-    private bool isDashing;
+    private bool IsDashing;
+    private bool IsStun;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         PlayerAnimator = GetComponentInChildren<Animator>();
         PlayerHealt.SetHealt(PlayerHealt.MaxHealt);
         CanDash = true;
-        isDashing = false;
+        IsDashing = false;
     }
 
     void Update()
@@ -46,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Run()
     {
-        if (!isDashing)
+        if (!IsDashing && !IsStun)
         {
             Vector2 PlayerVelocity = new Vector2(MoveInput.x * MoveSpeed, PlayerRigidbody.velocity.y);
             PlayerRigidbody.velocity = PlayerVelocity;
@@ -83,12 +84,13 @@ public class PlayerMovement : MonoBehaviour
         {
             //PlayerAnimator.SetBool("Jump", false);
         }
-        if (collision.CompareTag("Enemy") && !isDashing)
+        if (collision.CompareTag("Enemy") && !IsDashing)
         {
             PlayerHealt.Damage(15);
             PlayerPower.PowerMinus(5);
             Debug.Log(PlayerHealt.Healt);
             Debug.Log(PlayerPower.Power);
+            StartCoroutine(Stun(collision.transform));
         }
     }
 
@@ -103,16 +105,27 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Dash()
     {
         CanDash = false;
-        isDashing = true;
+        IsDashing = true;
         float OriginalGravity = PlayerRigidbody.gravityScale;
         PlayerRigidbody.gravityScale = 0f;
         PlayerRigidbody.velocity = new Vector2(PlayerRigidbody.velocity.x * DashPower, 0f);
         yield return new WaitForSeconds(DashingTime);
         PlayerRigidbody.gravityScale = OriginalGravity;
-        isDashing = false;
+        IsDashing = false;
         yield return new WaitForSeconds(DashingCooldown);
         CanDash = true;
     }
 
-
+    private IEnumerator Stun(Transform EnemyTransform)
+    {
+        PlayerRigidbody.velocity = new Vector2(0, 0f);
+        Vector2 StunDirection = transform.position - EnemyTransform.position;
+        StunDirection.y = 0.9f;
+        StunDirection.x = (StunDirection.x > 0) ? 0.7f : -0.7f;
+        IsStun = true;
+        PlayerRigidbody.AddForce(StunDirection * 13f, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.35f);
+        IsStun = false;
+        Debug.Log("asd");
+    }
 }
