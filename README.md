@@ -42,6 +42,8 @@ Metroidvania, 2D, Platform, Interactive, Rogue Like, Pixel Art Game
 
 # Sprint 1
 
+Sprint İçi Tamamlanması Tahmin Edilen Puan: 100
+Puan Tamamlama Mantığı: Her görevin 5 puan olması ve görev tamamladıkça ilerleme kaydetmek
 
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir.
   
@@ -56,7 +58,14 @@ https://img.imgyukle.com/2023/06/19/rjByuG.jpeg
 ![Backlog 1](https://img.imgyukle.com/2023/06/19/rjBBk6.png) 
 
 
-- **Ürün İlerlemesi**: Screenshots:
+- **Ürün İlerlemesi**:
+- Screenshots:
+https://img.imgyukle.com/2023/06/26/rgKu7Y.png
+https://img.imgyukle.com/2023/06/26/rgKJhR.png
+https://img.imgyukle.com/2023/06/26/rgKCNP.png
+https://img.imgyukle.com/2023/06/26/rgKQ8e.png
+https://img.imgyukle.com/2023/06/26/rgKyEN.png
+https://img.imgyukle.com/2023/06/26/rgKSqq.png
 
 - Coming Soon...
 
