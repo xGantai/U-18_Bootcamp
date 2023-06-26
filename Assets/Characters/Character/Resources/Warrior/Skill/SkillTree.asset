@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de0df43a2752954cafcaa535ef1cf18, type: 3}
+  m_Name: SkillTree
+  m_EditorClassIdentifier: 
+  Passive:
+  - {fileID: 11400000, guid: cf71b15aaba441649a19e128720ce203, type: 2}
+  - {fileID: 11400000, guid: 83909fc4bb328004ea001582479dd089, type: 2}
+  - {fileID: 11400000, guid: 5efc20aa56822e542ad4ce6a458d325a, type: 2}
+  - {fileID: 11400000, guid: 40247a63ed87a6441a3e2ed561f95358, type: 2}
+  - {fileID: 11400000, guid: 9e1309cfab176e742bf42357768b53de, type: 2}
+  - {fileID: 11400000, guid: 664f9cd23d6c78d4580eaf2ce75767b2, type: 2}
+  - {fileID: 11400000, guid: 1ef3c8112bb334b45bb35cdc233efe08, type: 2}
+  - {fileID: 11400000, guid: b1f240d1da1d51a4eaa16e45cc6110e6, type: 2}
+  - {fileID: 11400000, guid: 19d4cce93ca20cb40bcc25fbe3daef2f, type: 2}
+  Active1: []
+  Active2: []
+  Active3: []
