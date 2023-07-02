@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CharacterInfo
   m_EditorClassIdentifier: 
   Name: Father
-  CharacterPrefab: {fileID: 3847606824549329409, guid: 1f706d4aa4a562542bdd9327cd4ac9a8, type: 3}
+  CharacterPrefab: {fileID: 4265598983789254864, guid: 263dfd10359236b4cb682f660d4b3858, type: 3}
   Classes: 3
   CurrentPassive: {fileID: 11400000, guid: 40bfa83a0cfd3de4baa93264574a6c5b, type: 2}
   CurrentActive1: {fileID: 11400000, guid: 6994685910acc6e489a5b397d9c2620e, type: 2}

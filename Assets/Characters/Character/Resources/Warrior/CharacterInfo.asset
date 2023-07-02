@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CharacterInfo
   m_EditorClassIdentifier: 
   Name: Dante
-  CharacterPrefab: {fileID: 3847606824549329409, guid: 29d513078efffff4bb98b67cf64d0eae, type: 3}
+  CharacterPrefab: {fileID: 7095177024351325493, guid: 94bd32cb0e64fe44f93d7af6b54c0285, type: 3}
   Classes: 0
   CurrentPassive: {fileID: 11400000, guid: 40bfa83a0cfd3de4baa93264574a6c5b, type: 2}
   CurrentActive1: {fileID: 11400000, guid: 6994685910acc6e489a5b397d9c2620e, type: 2}

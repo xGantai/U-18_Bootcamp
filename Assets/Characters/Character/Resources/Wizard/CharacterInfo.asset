@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CharacterInfo
   m_EditorClassIdentifier: 
   Name: Mortius
-  CharacterPrefab: {fileID: 3847606824549329409, guid: 82f7459b6c3aa844fbd37d34590778e4, type: 3}
+  CharacterPrefab: {fileID: 5550063616189139899, guid: a6cebdca464bdbb469258a70d069f063, type: 3}
   Classes: 2
   CurrentPassive: {fileID: 11400000, guid: 40bfa83a0cfd3de4baa93264574a6c5b, type: 2}
   CurrentActive1: {fileID: 11400000, guid: 6994685910acc6e489a5b397d9c2620e, type: 2}

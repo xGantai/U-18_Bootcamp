@@ -20,18 +20,22 @@ public class PlayerMovement : MonoBehaviour
     public PointSystem PlayerPoint;
 
     private Animator PlayerAnimator;
-    public Vector2 PlayerDirection;
+    [HideInInspector] public Vector2 PlayerDirection;
     private Vector2 MoveInput;
     // Dash
     private bool CanDash;
-    public bool IsDashing { get; private set; }
+    [HideInInspector] public bool IsDashing;
+    [HideInInspector] public bool IsAttacking;
     public bool IsGround { get; set; }
     private bool IsStun;
+    [HideInInspector] private float AttackForwardMoveValue = 14f;
+    [HideInInspector] public bool EnemyHit;
 
     void Start()
     {
         PlayerRigidbody = GetComponent<Rigidbody2D>();
         PlayerAnimator = GetComponentInChildren<Animator>();
+        PlayerHealt.SetHealt(50);
         IsGround = true;
         CanDash = true;
         IsDashing = false;
@@ -39,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Run();
+        AttackForwardMove();
     }
 
 
@@ -49,12 +54,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Run()
     {
-        if (!IsDashing && !IsStun)
+        if (!IsDashing && !IsStun && !IsAttacking)
         {
             Vector2 PlayerVelocity = new Vector2(MoveInput.x * MoveSpeed, PlayerRigidbody.velocity.y);
             PlayerRigidbody.velocity = PlayerVelocity;
+            PlayerAnimator.SetFloat("Run", PlayerRigidbody.velocity.magnitude);
             Flip();
-            //PlayerAnimator.SetFloat("Run", PlayerRigidbody.velocity.magnitude);
+            PlayerAnimator.SetFloat("Fall", PlayerRigidbody.velocity.y);
         }
     }
 
@@ -63,11 +69,11 @@ public class PlayerMovement : MonoBehaviour
         if (IsGround)
         {
             PlayerRigidbody.velocity += new Vector2(0f, JumpSpeed);
-            //PlayerAnimator.SetBool("Jump", true);
+            PlayerAnimator.SetTrigger("Jump");
         }
     }
 
-    
+
     private void OnDash()
     {
         if (CanDash)
@@ -109,17 +115,35 @@ public class PlayerMovement : MonoBehaviour
         StunDirection.y = 0.9f;
         StunDirection.x = (StunDirection.x > 0) ? 0.7f : -0.7f;
         IsStun = true;
+        PlayerAnimator.SetTrigger("TakeHit");
         PlayerRigidbody.AddForce(StunDirection * 13f, ForceMode2D.Impulse);
-        yield return new WaitForSeconds(0.35f);
+        yield return new WaitForSeconds(0.4f);
+        if (PlayerHealt.Healt < 1)
+        {
+            InputsEnabled(false);
+            PlayerAnimator.SetTrigger("Death");
+        }
+        PlayerAnimator.SetTrigger("TakeHitFinish");
         IsStun = false;
     }
 
     public void PlayerOnDamage(Transform EnemyTransform)
     {
-        
-            PlayerHealt.Damage(15);
-            PlayerPower.PowerMinus(5);
-            Debug.Log("Healt: " + PlayerHealt.Healt);
-            StartCoroutine(Stun(EnemyTransform));
+
+        PlayerHealt.Damage(15);
+        PlayerPower.PowerMinus(5);
+        Debug.Log("Healt: " + PlayerHealt.Healt);
+        StartCoroutine(Stun(EnemyTransform));
+    }
+
+    public void InputsEnabled(bool EnabledData)
+    {
+        GetComponent<PlayerInput>().enabled = EnabledData;
+    }
+
+    public void AttackForwardMove()
+    {
+        if (IsAttacking && !IsStun && EnemyHit)
+            PlayerRigidbody.velocity = new Vector2(PlayerDirection.x * AttackForwardMoveValue, 0f);
     }
 }

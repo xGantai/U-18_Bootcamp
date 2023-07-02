@@ -8,38 +8,40 @@ public class PlayerSkills : MonoBehaviour
     [SerializeField] private Collider2D AttackCollider;
     [SerializeField] private LayerMask EnemyLayer;
     [SerializeField] private CharactersSO Character;
-    [SerializeField] private GameObject BombPrefab;
+    private Animator PlayerAnimator;
 
 
     PlayerMovement PlayerMove;
     void Start()
     {
         PlayerMove = GetComponent<PlayerMovement>();
+        PlayerAnimator = GetComponent<Animator>();
     }
-    private void OnFire()
+    private void OnAttack()
     {
-        
-        GameObject newbomb = Instantiate(BombPrefab, transform.position, Quaternion.identity);
-        newbomb.GetComponent<Bomb>().Direction = PlayerMove.PlayerDirection;
-
-        // Melee Attack
-        //PlayerAnimator.SetTrigger("Attack");
-        /*Collider2D[] HitColliders = new Collider2D[10];
-        ContactFilter2D ContactFilter = new ContactFilter2D();
-        ContactFilter.useTriggers = true;
-        ContactFilter.SetLayerMask(EnemyLayer);
-        int HitCount = Physics2D.OverlapCollider(AttackCollider, ContactFilter, HitColliders);
-        if (HitCount > 0)
-        {
-            for (int i = 0; i < HitCount; i++)
-            {
-                Debug.Log(HitColliders[i].name);
-            }
-        }*/
-
+        /*GameObject newbomb = Instantiate(BombPrefab, transform.position, Quaternion.identity);
+        newbomb.GetComponent<Bomb>().Direction = PlayerMove.PlayerDirection;*/
+        PlayerAnimator.SetTrigger("Attack");
+    }
+    private void OnHeavyAttack()
+    {
+        PlayerAnimator.SetTrigger("HeavyAttack");
     }
     private void OnCheckPoint()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Enemy")&& AttackCollider.gameObject.activeSelf)
+        {
+            //Debug.Log(collision.name);
+            PlayerMove.EnemyHit = true;
+        }
+    }
+    private void AttackAnimFinish()
+    {
+        PlayerMove.EnemyHit = false;
     }
 }

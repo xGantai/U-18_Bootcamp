@@ -6,6 +6,6 @@ public class GameManager : MonoBehaviour
 {
     void Start()
     {
-        Instantiate(CurrentCharacter.Character.CharacterPrefab, new Vector3(0, -1.6f, 0), Quaternion.identity);
+        Instantiate(CurrentCharacter.Character.CharacterPrefab, new Vector3(0, -2f, 0), Quaternion.identity);
     }
 }

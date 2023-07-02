@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CharacterInfo
   m_EditorClassIdentifier: 
   Name: Locky
-  CharacterPrefab: {fileID: 3847606824549329409, guid: d92dea45f57ca9042bf92eed858f6343, type: 3}
+  CharacterPrefab: {fileID: 128579677438327126, guid: 384e0e4cd888173429ffc5492e7e3225, type: 3}
   Classes: 1
   CurrentPassive: {fileID: 11400000, guid: 40bfa83a0cfd3de4baa93264574a6c5b, type: 2}
   CurrentActive1: {fileID: 11400000, guid: 6994685910acc6e489a5b397d9c2620e, type: 2}
