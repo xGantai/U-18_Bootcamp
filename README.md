@@ -79,3 +79,31 @@ Sprint Review katılımcıları: Eren Öztürk, Mervenur Kansak, Halis Oy, Asude
   - Ürün geliştirmede hız kazanılması gerektiği onaylanmıştır.
    
 ---
+
+# Sprint 2
+
+Sprint İçi Tamamlanması Tahmin Edilen Puan: 100
+Puan Tamamlama Mantığı: Her görevin 5 puan olması ve görev tamamladıkça ilerleme kaydetmek
+
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir.
+  
+[Sprint 1 Daily Scrum Chats]
+
+
+- **Sprint board update**: Sprint board screenshotları: 
+![Backlog 2]https://img.imgyukle.com/2023/07/08/rpxrrx.png
+
+
+- **Ürün İlerlemesi**:
+- Screenshots: Coming Soon...
+
+- **Sprint Review**: 
+Alınan kararlar: Proje devamında tüm ekibin zaman sıkıntılarından ötürü ve projede geliştirmede sıkıntı yaşamamızdan dolayı projede küçülmeye ve ürünün bazı noktalarından kısılması kararı alınmıştır.
+
+Sprint Review katılımcıları: Eren Öztürk, Mervenur Kansak, Halis Oy, Asude Nihan Arslan, Ege Han Çelebi.
+
+- **Sprint Retrospective:**
+  - Üründe küçültmeye gidilmesi düşünülmüştür.
+  - Kalan zamanda elden gelindiği kadar çalışılması gerektiği düşünülmüştür.
+   
+---
