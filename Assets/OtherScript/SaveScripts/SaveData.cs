@@ -22,9 +22,9 @@ public class SaveData
         Point = Player.PlayerPoint.Point;
         Healt = Player.PlayerHealt.Healt;
         MaxHealt = Player.PlayerHealt.MaxHealt;
-        PassiveLevel = CharacterData.CurrentPassive.SkillLevel;
-        Active1Level = CharacterData.CurrentActive1.SkillLevel;
-        Active2Level = CharacterData.CurrentActive2.SkillLevel;
-        Active3Level = CharacterData.CurrentActive3.SkillLevel;
+        PassiveLevel = CharacterData.SkillTree.Passive.SkillLevel;
+        Active1Level = CharacterData.SkillTree.Active1.SkillLevel;
+        Active2Level = CharacterData.SkillTree.Active2.SkillLevel;
+        Active3Level = CharacterData.SkillTree.Active3.SkillLevel;
     }
 }

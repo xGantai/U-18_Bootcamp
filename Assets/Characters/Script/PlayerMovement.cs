@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem;
 using UnityEngine;
-using static UnityEngine.UI.Image;
 
 public class PlayerMovement : MonoBehaviour
 {
     // Gravity Scale = 2
     private Rigidbody2D PlayerRigidbody;
 
+    public float GetMoveSpeed { get { return MoveSpeed; } }
     [SerializeField] private float MoveSpeed = 10;
     [SerializeField] private float JumpSpeed = 22;
     [SerializeField] private float DashPower = 3;
     [SerializeField] private float DashingTime = 0.15f;
     [SerializeField] private float DashingCooldown = 0.5f;
     public HealtSystem PlayerHealt;
-    public PowerSystem PlayerPower;
     public PointSystem PlayerPoint;
+    [HideInInspector] public float CurrentMoveSpeed;
 
     private Animator PlayerAnimator;
     [HideInInspector] public Vector2 PlayerDirection;
@@ -33,9 +33,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        CurrentMoveSpeed = MoveSpeed;
         PlayerRigidbody = GetComponent<Rigidbody2D>();
         PlayerAnimator = GetComponentInChildren<Animator>();
         PlayerHealt.SetHealt(50);
+        PlayerDirection = new Vector2(1f, 0f);
         IsGround = true;
         CanDash = true;
         IsDashing = false;
@@ -56,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!IsDashing && !IsStun && !IsAttacking)
         {
-            Vector2 PlayerVelocity = new Vector2(MoveInput.x * MoveSpeed, PlayerRigidbody.velocity.y);
+            Vector2 PlayerVelocity = new Vector2(MoveInput.x * CurrentMoveSpeed, PlayerRigidbody.velocity.y);
             PlayerRigidbody.velocity = PlayerVelocity;
             PlayerAnimator.SetFloat("Run", PlayerRigidbody.velocity.magnitude);
             Flip();
@@ -131,7 +133,6 @@ public class PlayerMovement : MonoBehaviour
     {
 
         PlayerHealt.Damage(15);
-        PlayerPower.PowerMinus(5);
         Debug.Log("Healt: " + PlayerHealt.Healt);
         StartCoroutine(Stun(EnemyTransform));
     }

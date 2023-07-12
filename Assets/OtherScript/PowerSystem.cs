@@ -5,22 +5,28 @@ using UnityEngine;
 [System.Serializable]
 public class PowerSystem
 {
-    public int MaxPower;
+    private int Power;
     [HideInInspector]
-    public int Power = 0;
+    public int CurrentPower = 0;
 
     public void PowerBoost(int PowerBoostData)
     {
-        Power = Mathf.Clamp(Power + PowerBoostData, 0, MaxPower);
+        CurrentPower = Mathf.Clamp(CurrentPower + PowerBoostData, Power, int.MaxValue);
     }
 
     public void SetPower(int PowerData)
     {
-        Power = Mathf.Clamp(PowerData, 0, MaxPower);
+        Power = Mathf.Clamp(PowerData, 0, int.MaxValue);
+
     }
 
     public void PowerMinus(int PowerMinusData)
     {
-        Power = Mathf.Clamp(Power - PowerMinusData, 0, MaxPower);
+        Power = Mathf.Clamp(CurrentPower - PowerMinusData, 0, int.MaxValue);
+    }
+
+    public void Powersynchronization()
+    {
+        CurrentPower = Power;
     }
 }

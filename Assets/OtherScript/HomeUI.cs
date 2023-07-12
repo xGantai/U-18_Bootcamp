@@ -19,10 +19,10 @@ public class HomeUI : MonoBehaviour
             PlayerData.PlayerHealt.MaxHealt = 100;
             PlayerData.PlayerHealt.SetHealt(100);
             PlayerData.PlayerPoint.Point = 0;
-            Character.CurrentPassive.SkillLevel = 0;
-            Character.CurrentActive1.SkillLevel = 0;
-            Character.CurrentActive2.SkillLevel = 0;
-            Character.CurrentActive3.SkillLevel = 0;
+            Character.SkillTree.Passive.SkillLevel = 0;
+            Character.SkillTree.Active1.SkillLevel = 0;
+            Character.SkillTree.Active2.SkillLevel = 0;
+            Character.SkillTree.Active3.SkillLevel = 0;
             SaveSystem.NewSaveData(SaveNum, Character, PlayerData);
             CurrentCharacter.Character = Character;
             SceneManager.LoadScene(1);
