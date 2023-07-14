@@ -14,8 +14,10 @@ public class PlayerAttack : MonoBehaviour
     PlayerMovement PlayerMove;
     void Start()
     {
+        PlayerPower = new PowerSystem();
         PlayerMove = GetComponent<PlayerMovement>();
         PlayerAnimator = GetComponent<Animator>();
+        PlayerPower.SetPower(10);
     }
     private void OnAttack()
     {
@@ -28,7 +30,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.TryGetComponent<Enemy>(out Enemy EnemySC) && AttackCollider.gameObject.activeSelf)
+        if (collision.TryGetComponent<Enemy>(out Enemy EnemySC) && AttackCollider.gameObject.activeSelf && collision.CompareTag("Enemy"))
         {
             PlayerMove.EnemyHit = true;
             EnemySC.Damage(PlayerPower.CurrentPower, transform);

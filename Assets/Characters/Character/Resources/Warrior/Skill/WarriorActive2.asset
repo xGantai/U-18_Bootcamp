@@ -16,7 +16,7 @@ MonoBehaviour:
   Name: "\u0130lahlar\u0131n \xD6fkesi"
   Description: "Karakter belli bir s\xFCre boyunca hasar almayacak ve vurdu\u011Fu
     hasar iki kat\u0131na \xE7\u0131kacak."
-  SkillLevel: 0
+  SkillLevel: 1
   SkillPrefabs: {fileID: 0}
   SkillLevels:
   - SkillCoolDown: 120

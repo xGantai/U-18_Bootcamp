@@ -21,15 +21,15 @@ MonoBehaviour:
   SkillLevel: 0
   SkillPrefabs: {fileID: 0}
   SkillLevels:
-  - SkillCoolDown: 0
-    SkillActiveTime: 0
+  - SkillCoolDown: 10
+    SkillActiveTime: 10
     SkillPower: 0
     SellPoint: 0
-  - SkillCoolDown: 0
-    SkillActiveTime: 0
+  - SkillCoolDown: 40
+    SkillActiveTime: 15
     SkillPower: 0
     SellPoint: 0
-  - SkillCoolDown: 0
-    SkillActiveTime: 0
+  - SkillCoolDown: 30
+    SkillActiveTime: 20
     SkillPower: 0
     SellPoint: 0

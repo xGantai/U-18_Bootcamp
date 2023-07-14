@@ -88,7 +88,7 @@
                 },
                 {
                     "name": "Skill3",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "d99a4c9c-d114-4643-ab02-09a43e9a318b",
                     "expectedControlType": "Button",
                     "processors": "",

@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator PlayerAnimator;
     [HideInInspector] public Vector2 PlayerDirection;
+    [HideInInspector] public float Playerx;
     private Vector2 MoveInput;
     // Dash
     private bool CanDash;
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        Playerx = transform.localScale.x;
         CurrentMoveSpeed = MoveSpeed;
         PlayerRigidbody = GetComponent<Rigidbody2D>();
         PlayerAnimator = GetComponentInChildren<Animator>();
@@ -86,12 +88,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (MoveInput.x > 0)
         {
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(Playerx, transform.localScale.y);
             PlayerDirection = new Vector2(1, 0);
         }
         if (MoveInput.x < 0)
         {
-            transform.localScale = new Vector2(-1, 1);
+            transform.localScale = new Vector2(-Playerx, transform.localScale.y);
             PlayerDirection = new Vector2(-1, 0);
         }
     }

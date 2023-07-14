@@ -12,6 +12,6 @@ public class SkillTimeSystem
     {
         CoolDown = 0;
         ActiveTime = 0;
-        WorkOnce = false;
+        WorkOnce = true;
     }
 }

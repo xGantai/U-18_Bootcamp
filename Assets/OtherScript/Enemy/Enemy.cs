@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class Enemy : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class Enemy : MonoBehaviour
         {
 
         }
+    }
+
+    public IEnumerator TimedDamage(float Time, int power)
+    {
+        yield return new WaitForSeconds(Time);
+        DamageNotStun(power);
     }
 
     public void DamageNotStun(int Power)
@@ -64,8 +71,14 @@ public class Enemy : MonoBehaviour
         EnemyRigidbody.velocity = new Vector2(0f, 0f);
     }
 
-    private void Death()
+    public void Death()
     {
         Destroy(gameObject);
+    }
+
+    public void ImmediateDeath()
+    {
+        //animation death and Death function
+        Death();
     }
 }

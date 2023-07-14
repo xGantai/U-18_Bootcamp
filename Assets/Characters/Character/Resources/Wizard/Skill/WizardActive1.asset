@@ -16,10 +16,10 @@ MonoBehaviour:
   Name: "Karanl\u0131\u011F\u0131n Eli"
   Description: "D\xFC\u015Fmana uzaktan bir lanet g\xF6nderip ona 3x hasar vuran
     bir el g\xF6nderir"
-  SkillLevel: 2
+  SkillLevel: 0
   SkillPrefabs: {fileID: 5780244074357703521, guid: b3fe15e34cc046b46892d4836c171cf8, type: 3}
   SkillLevels:
-  - SkillCoolDown: 5
+  - SkillCoolDown: 60
     SkillActiveTime: 0
     SkillPower: 2
     SellPoint: 0
