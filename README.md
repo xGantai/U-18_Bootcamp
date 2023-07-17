@@ -87,7 +87,7 @@ Puan Tamamlama Mantığı: Her görevin 5 puan olması ve görev tamamladıkça 
 
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir.
   
-[Sprint 1 Daily Scrum Chats]
+[Sprint 2 Daily Scrum Chats]
 
 
 - **Sprint board update**: Sprint board screenshotları: 
@@ -95,7 +95,9 @@ Puan Tamamlama Mantığı: Her görevin 5 puan olması ve görev tamamladıkça 
 
 
 - **Ürün İlerlemesi**:
-- Screenshots: Coming Soon...
+- Screenshots:
+- https://img.imgyukle.com/2023/07/17/rmoYse.png
+- https://img.imgyukle.com/2023/07/17/rmoTSR.png
 
 - **Sprint Review**: 
 Alınan kararlar: Proje devamında tüm ekibin zaman sıkıntılarından ötürü ve projede geliştirmede sıkıntı yaşamamızdan dolayı projede küçülmeye ve ürünün bazı noktalarından kısılması kararı alınmıştır.
@@ -105,5 +107,36 @@ Sprint Review katılımcıları: Eren Öztürk, Mervenur Kansak, Halis Oy, Asude
 - **Sprint Retrospective:**
   - Üründe küçültmeye gidilmesi düşünülmüştür.
   - Kalan zamanda elden gelindiği kadar çalışılması gerektiği düşünülmüştür.
+   
+---
+
+# Sprint 3
+
+Sprint İçi Tamamlanması Tahmin Edilen Puan: 100
+Puan Tamamlama Mantığı: Her görevin 5 puan olması ve görev tamamladıkça ilerleme kaydetmek
+
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir.
+  
+[Sprint 3 Daily Scrum Chats]
+
+
+- **Sprint board update**: Sprint board screenshotları: 
+![Backlog 3]https://img.imgyukle.com/2023/07/17/rmoyUb.png
+
+
+- **Ürün İlerlemesi**:
+- Screenshots:
+- https://img.imgyukle.com/2023/07/17/rmoYse.png
+- https://img.imgyukle.com/2023/07/17/rmoTSR.png
+  
+
+- **Sprint Review**: 
+Alınan kararlar: Projenin son adımı bitti ve yüklenmeye hazır durumda.
+
+Sprint Review katılımcıları: Eren Öztürk, Mervenur Kansak, Halis Oy, Asude Nihan Arslan, Ege Han Çelebi.
+
+- **Sprint Retrospective:**
+  - Güncellemelerle ve geliştirmelerle oyunu ileriye taşıyabileceğimiz düşünülmüştür.
+    
    
 ---
