@@ -12,7 +12,7 @@ Takım: U-18
 - Asude Nihan Arslan: Game Artist / Level Design
 - Egecan Çelebi: Game Artist / Game Design
 
-## Call Of Heroes: Light Rising From Darkness - Kahramanların Çağrısı: Karanlıktan Yükselen Işık
+## Call Of Heroes: Star Rising From Darkness - Kahramanların Çağrısı: Karanlıktan Yükselen Yıldız
 
 --Game--
 
@@ -36,8 +36,8 @@ Metroidvania, 2D, Platform, Interactive, Rogue Like, Pixel Art Game
 
 ## Asistanımıza Not
 
--Oyun açıklaması detaylı doldurulmak istendiğinden 2. sprintte doldurulmasının daha doğru olacağı düşünülmüştür.
-
+-Oyun açıklaması;
+Metroidvania türündeki oyunumuz 2d platform hikayeli bir aksiyon oyunudur. Oyunumuzda skill ağacı sistemi, farklı karakter seçme sistemi, save sistemi, farklı skill sistemi ve güzel bir kombo oynanış mekaniği ile sizlere sunulmuştur.
 ---
 
 # Sprint 1
