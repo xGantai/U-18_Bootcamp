@@ -8,9 +8,9 @@ Takım: U-18
 ## Takım:
 - Eren Öztürk: Scrum Master / Product Owner
 - MerveGül Kansak: Developer / Product Owner
-- Halis Oy: Developer / Level Design
-- Asude Nihan Arslan: Game Artist, Level Design
-- Egecan Çelebi: Game Artist, Level Design
+- Halis Oy: Developer / Master Develop!
+- Asude Nihan Arslan: Game Artist / Level Design
+- Egecan Çelebi: Game Artist / Game Design
 
 ## Call Of Heroes: Light Rising From Darkness - Kahramanların Çağrısı: Karanlıktan Yükselen Işık
 
